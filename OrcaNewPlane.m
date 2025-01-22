@@ -1,3 +1,16 @@
+%% this function takes 8 inputs and output the vo planes
+%% input:
+%% p: self position
+%% v: self velocity,   both are vector 1*3
+%% op: obstacles position
+%% ov: obstacles velocity,   both are matrix n*3
+%% exd: the extra distance
+%% th: time horizon
+%% dt: minimum time duration
+%% rto: the ratio of avoid other obstacles
+%% output:
+%% plane: the vo planes,     matrix n*4
+%% maskstc: static obstacles mask,   vector n*1
 function [plane,maskstc] = OrcaNewPlane(p,v,op,ov,exd,th,dt,rto)
     %% Create agent ORCA planes. 
     num = size(op,1);
