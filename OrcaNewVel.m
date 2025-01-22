@@ -1,3 +1,9 @@
+%% this function take planes and maskstc from orcanewplane
+%% and ouput new velocity
+%% inputs:
+%% prefv: user defined prefer velocity,   vector 1*3
+%% lb: lower bounds
+%% ub: upper bounds,    both are vector 1*3
 function newvel = OrcaNewVel(plane,prefv,lb,ub,maskstc)       
     H = [2 0 0; 0 2 0; 0 0 2];
     c = [-2*prefv(1); -2*prefv(2); -2*prefv(3)];
